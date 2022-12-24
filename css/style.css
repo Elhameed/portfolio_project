@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
 :root{
-    --main-color:#e38528;
+    --main-color: #c0362c;
 }
 
 *{
@@ -428,61 +428,11 @@ header .follow a:hover{
     padding-top: .5rem;
 }
 
-.experience .box-container{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.experience .box-container .box{
-    position: relative;
-    flex:1 1 33rem;
-    border-left: .2rem solid var(--main-color);
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-bottom: 2rem;    
-}
-
-.experience .box-container .box::before{
-    content: '';
-    position: absolute;
-    top:0; left:-1rem;
-    height:2rem;
-    width:2rem;
-    border-radius: 50%;
-    background:var(--main-color);
-}
-
-.experience .box-container .box .content{
-    background:#fff;
-    padding:1.5rem;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
-    border-radius: .5rem;
-}
-
-.experience .box-container .box .content span{
-    color:#fff;
-    font-size: 1.7rem;
-    background:var(--main-color);
-    border-radius: 50rem;
-    padding:.4rem 1rem;
-}
-
-.experience .box-container .box .content h3{
-    font-size: 2.5rem;
-    padding:.5rem 0;
-    color:#111;
-}
-
-.experience .box-container .box .content p{
-    font-size: 1.5rem;
-    color:#666;
-}
-
 .work-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
             grid-gap: 40px;
-            margin-top: 50px;
+            margin-top: 25px;
         }
 
         .work {
@@ -501,7 +451,7 @@ header .follow a:hover{
         .layer {
             width: 100%; 
             height: 0;
-            background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+            background: linear-gradient(rgba(0, 0, 0, 0.6), var(--main-color));
             border-radius: 10px;
             position: absolute;
             left: 0;
@@ -525,7 +475,7 @@ header .follow a:hover{
 
         .layer a {
             margin-top: 20px;
-            color: #ff004f;
+            color: var(--main-color);
             text-decoration: none;
             font-size: 18px;
             line-height: 60px;
