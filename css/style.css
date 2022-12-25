@@ -462,7 +462,7 @@ header .follow a:hover{
             justify-content: center;
             flex-direction: column;
             padding: 0 20px;
-            text-align: center;
+            text-align: left;
             color: white;
             font-size: 14px;
             transition: height 0.5s;
