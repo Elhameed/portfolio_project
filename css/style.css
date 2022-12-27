@@ -220,6 +220,11 @@ header .follow a:hover{
           width: 3px;
           animation: blink 1s infinite;
         }
+
+.about {
+    min-height: 80vh;
+}
+
 .about .row-1{
     display: flex;
     flex-wrap: wrap;
