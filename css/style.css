@@ -478,15 +478,21 @@ header .follow a:hover{
             margin-bottom: 15px;
         }
 
+        .links {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+
         .layer a {
-            margin-top: 20px;
+            margin-top: 10px;
             color: var(--main-color);
             text-decoration: none;
             font-size: 18px;
-            line-height: 60px;
+            line-height: 45px;
             background: white;
-            width: 60px;
-            height: 60px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
             text-align: center;
         }
