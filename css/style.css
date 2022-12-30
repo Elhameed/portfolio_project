@@ -275,125 +275,10 @@ header .follow a:hover{
     color:var(--main-color);
 }
 
-.about .row-2{
-    display: flex;
-    flex-wrap: nowrap;
-    gap:1.5rem;
-    align-items: left;
-}
-
-.about .row-2 .skills{
-    flex:1 1 40rem;
-}
-
-.about .row-2 .skills .progress{
-    padding:1rem 0;
-}
-
-.about .row-2 .skills .progress h3{
-    display: flex;
-    justify-content: space-between;
-    padding:.7rem 0;
-    font-size: 1.7rem;
-    color:#111;
-    font-weight: 400;
-}
-
-.about .row-2 .skills-2{
-    flex:1 1 40rem;
-}
-
-.about .row-2 .skills-2 .progress-2{
-    padding:1rem 0;
-}
-
-.about .row-2 .skills-2 .progress-2 h3{
-    display: flex;
-    justify-content: space-between;
-    padding:.7rem 0;
-    font-size: 1.7rem;
-    color:#111;
-    font-weight: 400;
-}
-
-.about .row-2 .skills .progress .bar{
-    width:100%;
-    background:#ccc;
-    overflow:hidden;
-    height:1rem;
-    border-radius: 50rem;
-}
-
-.about .row-2 .skills-2 .progress-2 .bar-2{
-    width:100%;
-    background:#ccc;
-    overflow:hidden;
-    height:1rem;
-    border-radius: 50rem;
-}
-
-.about .row-2 .skills .progress .bar span{
-    display:block;
-    height:100%;
-    background:var(--main-color);
-    border-radius: 50rem;
-}
-
-.about .row-2 .skills-2 .progress-2 .bar-2 span{
-    display:block;
-    height:100%;
-    background:var(--main-color);
-    border-radius: 50rem;
-}
-
-.about .row-2 .skills .progress:nth-child(1) .bar span{
-    width:100%;
-}
-
-.about .row-2 .skills .progress:nth-child(2) .bar span{
-    width:75%;
-}
-
-.about .row-2 .skills .progress:nth-child(3) .bar span{
-    width:95%;
-}
-
-.about .row-2 .skills-2 .progress-2:nth-child(1) .bar-2 span{
-    width:85%;
-}
-
-.about .row-2 .skills-2 .progress-2:nth-child(2) .bar-2 span{
-    width:90%;
-}
-
-.about .row-2 .skills-2 .progress-2:nth-child(3) .bar-2 span{
-    width:75%;
-}
-
-.about .row-2 .box-container{
-    flex:1 1 40rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap:1.5rem;
-}
-
-.about .row-2 .box-container .box{
-    flex:1 1 15rem;
-    background:#fff;
-    padding:2rem;
-    border-radius: .5rem;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
-}
-
-.about .row-2 .box-container .box h3{
+.about .row-1 .content .box-container .box a{
+    text-decoration: none;
+    text-transform: none;
     color:var(--main-color);
-    font-size: 3rem;
-}
-
-.about .row-2 .box-container .box p{
-    color:#666;
-    font-size: 1.7rem;
-    padding-top: .5rem;
 }
 
 .service .box-container{
@@ -433,6 +318,9 @@ header .follow a:hover{
     padding-top: .5rem;
 }
 
+.portfolio {
+    min-height: 80vh;
+}
 .work-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
@@ -504,6 +392,10 @@ header .follow a:hover{
         .work:hover .layer {
             height: 100%;
         }
+
+.contact {
+    min-height: 70vh;
+}
 
 .contact .icons-container{
     display: flex;
