@@ -281,6 +281,10 @@ header .follow a:hover{
     color:var(--main-color);
 }
 
+.service {
+    min-height: 70vh;
+}
+
 .service .box-container{
     display: flex;
     flex-wrap: wrap;
