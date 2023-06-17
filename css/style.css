@@ -58,6 +58,8 @@ section{
     letter-spacing: .2rem;
 }
 
+/* ===== Header section starts ===== */
+
 header{
     position: fixed;
     top:0; left:0; bottom:0;
@@ -87,11 +89,11 @@ header .logo span{
 
 header .navbar a{
     display: block;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color:#fff;
     margin:2rem 0;
     text-align: left;
-    padding: 10px 20px;
+    padding: 8px 20px;
 }
 
 header .navbar a:hover{
@@ -121,6 +123,8 @@ header .follow a:hover{
     cursor:pointer;
     display: none;
 }
+
+/* ===== Header section ends ===== */
 
 .cursor-1{
     position: absolute;
@@ -154,6 +158,9 @@ header .follow a:hover{
 .cursor-2.active{
     display: none;
 }
+
+
+/* ===== Home section starts ===== */
 
 .home{
     display: flex;
@@ -190,39 +197,31 @@ header .follow a:hover{
     text-transform: uppercase;
 }
 
-.home .content .info{
-    font-size: 2.5rem;
-    color:#111;
-    padding:.5rem 0;
-}
-
-.home .content .text{
-    font-size: 1.7rem;
-    color:#666;
-    padding:.5rem 0;
-}
-
 .container p {
-          font-size: 3rem;
-          padding: 0.5rem;
-          letter-spacing: 0.1rem;
-          overflow: hidden;
-        }
-        .container p span.typed-text {
-          font-weight: normal;
-          color:var(--main-color);
-          text-decoration: none;
-        }
-        .container p span.cursor {
-          display: inline-block;
-          background-color: var(--main-color);
-          margin-left: 0.1rem;
-          width: 3px;
-          animation: blink 1s infinite;
-        }
+    font-size: 3rem;
+    padding: 0.5rem;
+    letter-spacing: 0.1rem;
+    overflow: hidden;
+}
+.container p span.typed-text {
+    font-weight: normal;
+    color:var(--main-color);
+    text-decoration: none;
+}
+.container p span.cursor {
+    display: inline-block;
+    background-color: var(--main-color);
+    margin-left: 0.1rem;
+    width: 3px;
+    animation: blink 1s infinite;
+}
+
+/* ===== Home section ends ===== */
+
+/* ===== About section starts ===== */
 
 .about {
-    min-height: 80vh;
+    min-height: 75vh;
 }
 
 .about .row-1{
@@ -281,46 +280,115 @@ header .follow a:hover{
     color:var(--main-color);
 }
 
+/* ===== About section ends ===== */
+
+/* ===== Interests section starts ===== */
+
+.interests {
+  min-height: 35vh;
+}
+
+.interests .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  justify-content: center;
+}
+
+.interests .box {
+  flex: 1 1 20rem;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  background: var(--main-color);
+  color: #fff;
+  border-radius: 0.5rem;
+}
+
+.interests .box i {
+  font-size: 3rem;
+  margin-right: 1rem;
+}
+
+.interests .box.software-dev i {
+  color: #27ae60; 
+}
+
+.interests .box.ai i {
+  color: #3498db; 
+}
+
+.interests .box.photography i {
+  color: #9b59b6; 
+}
+
+.interests .box.web-dev i {
+  color: #f39c12; 
+}
+
+
+.interests .box p {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* ===== Interests section ends ===== */
+
+/* ===== Service section starts ===== */
+
 .service {
-    min-height: 70vh;
+  min-height: 70vh;
 }
 
-.service .box-container{
-    display: flex;
-    flex-wrap: wrap;
-    gap:1.5rem;
+.service .box-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1.5rem;
 }
 
-.service .box-container .box{
-    flex:1 1 30rem;
-    text-align: center;
-    padding:2rem;
-    background:#fff;
-    border-radius: .5rem;
-    box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+.service .box {
+  text-align: center;
+  padding: 2rem;
+  background: #fff;
+  border-radius: .5rem;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
 }
 
-.service .box-container .box i{
-    height:6rem;
-    width:6rem;
-    line-height: 6rem;
-    font-size: 2.5rem;
-    color:#fff;
-    background:var(--main-color);
-    border-radius: 50%;
+.service .box i {
+  height: 6rem;
+  width: 6rem;
+  line-height: 6rem;
+  font-size: 2.5rem;
+  color: #fff;
+  background: var(--main-color);
+  border-radius: 50%;
 }
 
-.service .box-container .box h3{
-    color:#444;
-    font-size: 2.2rem;
-    padding-top: 1rem;
+.service .box h3 {
+  color: #444;
+  font-size: 2.2rem;
+  padding-top: 1rem;
 }
 
-.service .box-container .box p{
-    color:#666;
-    font-size: 1.7rem;
-    padding-top: .5rem;
+.service .box p {
+  color: #666;
+  font-size: 1.7rem;
+  padding-top: .5rem;
+  text-transform: none;
 }
+
+/* Media queries for responsive layout */
+@media (max-width: 768px) {
+  .service .box-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+
+/* ===== Service section ends ===== */
+
 
 .portfolio {
     min-height: 80vh;
@@ -501,7 +569,7 @@ header .follow a:hover{
     background: #fff;
 }
 
-.footer span{
+.footer span, a{
     color:var(--main-color);
 }
 
