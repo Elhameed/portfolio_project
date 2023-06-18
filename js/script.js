@@ -97,3 +97,53 @@ document.addEventListener("scroll", () => {
         backToTopButton.classList.add("hidden");
     }
 });
+
+
+
+
+
+window.addEventListener('DOMContentLoaded', function() {
+  const workItems = document.querySelectorAll('.work');
+  const modalOverlay = document.querySelector('.modal-overlay');
+  const modalContent = document.querySelector('.modal-content');
+  const closeModal = document.querySelector('.close-modal');
+  const modalDetails = document.querySelector('.modal-details');
+
+  // Open modal and display hidden content
+  function openModal(content) {
+    modalDetails.innerHTML = content.innerHTML;
+    modalOverlay.style.display = 'flex';
+  }
+
+  // Close modal
+  function closeModalHandler() {
+    modalOverlay.style.display = 'none';
+  }
+
+  // Attach click event listeners to work items
+  workItems.forEach(function(workItem) {
+    workItem.addEventListener('click', function(e) {
+      const hiddenContent = this.querySelector('.hidden-content');
+      openModal(hiddenContent);
+    });
+  });
+
+  // Attach click event listener to close modal button
+  closeModal.addEventListener('click', closeModalHandler);
+
+  // Close modal when clicking outside the modal content
+  modalOverlay.addEventListener('click', function(e) {
+    if (e.target === modalOverlay) {
+      closeModalHandler();
+    }
+  });
+});
+
+
+
+
+
+
+
+
+

@@ -390,80 +390,228 @@ header .follow a:hover{
 /* ===== Service section ends ===== */
 
 
+/* ===== Portfolio section starts ===== */
+
 .portfolio {
-    min-height: 80vh;
+  min-height: 80vh;
 }
+
 .work-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-            grid-gap: 40px;
-            margin-top: 25px;
-        }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 25px;
+}
 
-        .work {
-            border-radius: 10px;
-            position: relative;
-            overflow: hidden;
-        }
+.work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
 
-        .work img {
-            width: 100%;
-            border-radius: 10px;
-            display: block;
-            transition: transform 0.5s;
-        }
+.work img {
+  display: block;
+  width: 100%;
+}
 
-        .layer {
-            width: 100%; 
-            height: 0;
-            background: linear-gradient(rgba(0, 0, 0, 0.6), var(--main-color));
-            border-radius: 10px;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            padding: 0 20px;
-            text-align: left;
-            color: white;
-            font-size: 14px;
-            transition: height 0.5s;
-        }
+.details {
+  padding: 15px;
+  background-color: #fff;
+}
 
-        .layer h3 {
-            font-weight: 500;
-            margin-bottom: 15px;
-        }
+.category {
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: block;
+  color: var(--main-color);
+}
 
-        .links {
-            display: flex;
-            flex-direction: row;
-            gap: 10px;
-        }
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
 
-        .layer a {
-            margin-top: 20px;
-            color: var(--main-color);
-            text-decoration: none;
-            font-size: 18px;
-            line-height: 45px;
-            background: white;
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            text-align: center;
-        }
+.title span {
+  display: inline-block;
+  position: relative;
+}
 
-        .work:hover img {
-            transform: scale(1.1);
-        }
+.title span:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  left: 0;
+  bottom: 3px;
+  transition: width 0.3s ease;
+}
 
-        .work:hover .layer {
-            height: 100%;
-        }
+.title:hover span:before {
+  width: 0%;
+}
+
+
+.hidden-content {
+  display: none;
+}
+
+.popup-details {
+  padding: 20px;
+  background-color: #fcf2e8;
+}
+
+.main-details {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.textbox {
+  flex: 60%;
+  padding-right: 20px;
+}
+
+.textbox p {
+  margin-bottom: 15px;
+  text-transform: none;
+}
+
+.textbox ul {
+    padding-left: 25px;
+}
+
+.detailbox {
+  flex: 40%;
+  flex-wrap: wrap;
+  overflow-wrap: break-word;
+  word-break: break-word; /* Add this property for better cross-browser support */
+  padding-left: 20px;
+  max-width: 100%; /* Add this property to ensure the detailbox doesn't exceed its container's width */
+}
+
+
+.detailbox ul {
+  margin: 0;
+  list-style-type: none;
+}
+
+.detailbox li {
+  margin-bottom: 10px;
+}
+
+.detailbox .first {
+  font-weight: bold;
+  font-size: 18px;
+  display: block;
+}
+
+.detailbox span a {
+  text-decoration: none;
+  text-transform: none;
+  color: #7d7789;
+}
+
+.detailbox span a:hover{
+    color: var(--main-color);
+}
+
+.additional-images ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.additional-images ul li {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.additional-images ul li .list-inner {
+  position: relative;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.additional-images ul li .my-image {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.additional-images ul li .my-image .image {
+  flex-basis: 50%;
+  max-width: 50%;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+.additional-images ul li .my-image .image img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5%;
+}
+
+.additional-images ul li .my-image .image:last-child {
+  padding-right: 0;
+}
+
+.additional-images ul li .my-image img {
+  opacity: 1;
+  width: 100%;
+  border-radius: 5%;
+}
+
+.hidden-content.show {
+  display: block;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background-color: #fcf2e8;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  width: 50%;
+  height: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.modal-details {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.modal-details img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== Portfolio section ends ===== */
+
 
 .contact {
     min-height: 70vh;
