@@ -485,9 +485,9 @@ header .follow a:hover{
   flex: 40%;
   flex-wrap: wrap;
   overflow-wrap: break-word;
-  word-break: break-word; /* Add this property for better cross-browser support */
+  word-break: break-word; 
   padding-left: 20px;
-  max-width: 100%; /* Add this property to ensure the detailbox doesn't exceed its container's width */
+  max-width: 100%; 
 }
 
 
@@ -608,6 +608,65 @@ header .follow a:hover{
 .modal-details img {
   max-width: 100%;
   height: auto;
+}
+
+
+/* Media queries for responsiveness */
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+    max-width: 90%;
+  }
+  
+  .textbox {
+    flex: 100%;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+  
+  .detailbox {
+    flex: 100%;
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+  
+  .main-details,
+  .detailbox {
+    flex-wrap: wrap;
+  }
+  
+  .main-details .textbox,
+  .detailbox .textbox {
+    flex: 100%;
+    padding-right: 0;
+  }
+  
+  .main-details .detailbox,
+  .detailbox .detailbox {
+    flex: 100%;
+    padding-left: 0;
+  }
+  
+  .additional-images ul li .my-image .image {
+    flex-basis: 100%;
+    max-width: 100%;
+    padding-right: 0;
+  }
+
+  .additional-images ul li .my-image .image img {
+  height: 500px;
+  object-fit: cover;
+  border-radius: 5%;
+}
+
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    width: 95%;
+    max-width: 95%;
+  }
 }
 
 /* ===== Portfolio section ends ===== */
