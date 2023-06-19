@@ -33,7 +33,7 @@
             <a href="#about"><i class="fa fa-user"></i> about</a>
             <a href="#service"><i class="fa fa-server"></i> service</a>
             <a href="#portfolio"><i class="fa fa-file"></i> portfolio</a>
-            <a href="#"><i class="fa fa-newspaper"></i> blog</a>
+            <a href="#blog"><i class="fa fa-newspaper"></i> blog</a>
             <a href="#contact"><i class="fa fa-envelope"></i> contact</a>
         </nav>
 
@@ -699,6 +699,69 @@
     <!-- Modal Overlay -->
     <br><br><br><br>
 
+
+    <!-- blog section starts  -->
+
+    <section class="blog" id="blog">
+      <h1 class="heading"> <span>my </span> blog</h1>
+
+      <!-- blog container -->
+      <div class="blog-container">
+          <!--box 1-->
+          <div class="blog-box">
+              <!--img-->
+              <div class="blog-img">
+                  <img src="images/blog1.png">
+              </div>
+              <!--text-->
+              <div class="blog-text">
+                  <span>21 March 2023 </span>
+                  <a href="https://medium.com/@teniolaajani2004/understanding-immutable-and-mutable-objects-in-python-5c350f99d8ab" target="_blank" class="blog-title">Understanding Immutable and Mutable Objects in Python</a>
+                  <p>In Python, everything is an object, which means that everything has an identity (id), a type, and a value. An object’s identity is a unique number that is assigned to it when it is created. </p>
+                  <a href="https://medium.com/@teniolaajani2004/understanding-immutable-and-mutable-objects-in-python-5c350f99d8ab" target="_blank">Read More <img class="svg" src="images/svg/top-arrow.svg" alt="" /></a>
+              </div>
+          </div>
+
+          <!--box 2-->
+          <div class="blog-box">
+              <!--img-->
+              <div class="blog-img">
+                  <img src="images/blog2.png">
+              </div>
+              <!--text-->
+              <div class="blog-text">
+                  <span>09 March 2023 </span>
+                  <a href="https://medium.com/@teniolaajani2004/tips-for-debugging-code-how-to-find-and-fix-errors-f94227e17422" target="_blank" class="blog-title">Tips for Debugging Code: How to Find and Fix Errors</a>
+                  <p>Debugging is an essential skill for any programmer. No matter how experienced you are, you’re bound to encounter errors in your code from time to time. </p>
+                  <a href="https://medium.com/@teniolaajani2004/tips-for-debugging-code-how-to-find-and-fix-errors-f94227e17422" target="_blank">Read More <img class="svg" src="images/svg/top-arrow.svg" alt="" /></a>
+              </div>
+          </div>
+
+          <!--box 3-->
+          <div class="blog-box">
+              <!--img-->
+              <div class="blog-img">
+                  <img src="images/blog3.png">
+              </div>
+              <!--text-->
+              <div class="blog-text">
+                  <span>17 March 2023 </span>
+                  <a href="https://medium.com/@teniolaajani2004/understanding-object-and-class-attributes-in-python-creation-access-and-the-dict-attribute-e3718777a1e8" target="_blank" class="blog-title">Understanding Object and Class Attributes in Python</a>
+                  <p>Object-oriented programming is a popular programming paradigm that allows developers to create reusable code in the form of classes and objects. </p>
+                  <a href="https://medium.com/@teniolaajani2004/understanding-object-and-class-attributes-in-python-creation-access-and-the-dict-attribute-e3718777a1e8" target="_blank">Read More <img class="svg" src="images/svg/top-arrow.svg" alt="" /></a>
+              </div>
+          </div>
+      </div>
+
+      <!-- See More button -->
+      <div class="see-more">
+        <a href="https://medium.com/@teniolaajani2004" class="btn" target="_blank">See More</a>
+      </div>
+      
+    </section>
+
+    <!-- blog section ends  -->
+
     <!-- contact section starts  -->
 
     <section class="contact" id="contact">
@@ -708,12 +771,12 @@
 
         <div class="row">
 
-            <form action="">
+            <form action="https://formsubmit.co/a.ajani@alustudent.com" method="POST">
 
-                <input type="text" placeholder="name" class="box" required>
-                <input type="email" placeholder="email" class="box" required>
+                <input type="text" placeholder="name" class="box" name="name" required>
+                <input type="email" placeholder="email" class="box" name="email" required>
 
-                <textarea name="" placeholder="message" id="" cols="30" rows="10" required></textarea>
+                <textarea name="message" placeholder="message" id="" cols="30" rows="10" required></textarea>
 
                 <input type="submit" class="btn" value="send message">
 
